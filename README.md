@@ -16,7 +16,10 @@
     
     5. 卡尔曼滤波的参数整定
     
-    6. 修改系列芯片需要修改的设置（CSDN：https://blog.csdn.net/qq_42680785/article/details/101946624?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163324344816780357278719%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163324344816780357278719&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-101946624.first_rank_v2_pc_rank_v29&utm_term=%E6%9B%B4%E6%94%B9%E8%8A%AF%E7%89%87&spm=1018.2226.3001.4187）
+    6. 修改系列芯片需要修改的设置
+CSDN：
+
+    https://blog.csdn.net/qq_42680785/article/details/101946624?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163324344816780357278719%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163324344816780357278719&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-101946624.first_rank_v2_pc_rank_v29&utm_term=%E6%9B%B4%E6%94%B9%E8%8A%AF%E7%89%87&spm=1018.2226.3001.4187）
 
 卡尔曼滤波的效果：
    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/Graph2.png)
@@ -156,15 +159,15 @@
     
     首先，串口该部分为接收数据部分
     
-    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20143938.png)
+![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20143938.png)
     
     进而，接受数据部分为
     
-    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144014.png)
+![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144014.png)
     
     初始化过程中，一定要保证初始化的波特率与软件一致，其次，如果PA9与PA10通过跳线帽与UART1 TX与RX连接，一定要带上跳线帽，CH340两个通信引脚设计时不用接在这两个引脚上
     
-    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144036.png)
+![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144036.png)
     
     程序可以直接移植正点原子程序或本程序
 
@@ -172,9 +175,9 @@
 
     卡尔曼滤波的结构体定义部分放在h文件中，并且一定要在尾部extern，其余文件引用时也要extern
     
-    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144435.png)
+![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144435.png)
     
-    ![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144506.png)
+![image](https://github.com/OxfordProfessor/KalmanFilter/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-10-03%20144506.png)
     
 PID速度调节部分----------------------------------------------------------------------
 
